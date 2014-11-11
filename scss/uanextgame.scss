@@ -1,0 +1,42 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+#next-game {
+  background: url(/img/127128.jpg) no-repeat center center;
+  min-height: 200px;
+
+  h1, span, .score h2 {
+    color: #fff;
+    text-align: center;
+  }
+  h1 {
+    padding: 40px 0 20px;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  span {
+    display: block;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .logo {
+    max-width: 100px;
+    display: block;
+
+    &.home {
+      margin-left: auto;
+    }
+    &.away {
+      margin-right: auto;
+    }
+  }
+  .row {
+    padding-bottom: 40px;
+  }
+}
+
+#schedule {
+  .gametime {
+    float: right;
+  }
+}

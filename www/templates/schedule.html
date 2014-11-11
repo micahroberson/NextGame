@@ -1,0 +1,6 @@
+<div id="schedule" class="list list-inset">
+  <div class="item" ng-repeat="game in games">
+    {{game.away}}
+    <span class="gametime">{{game.gametime | amDateFormat:'ddd, MMM Do @ h:mm a'}}</span>
+  </div>
+</div>
