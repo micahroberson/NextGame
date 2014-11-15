@@ -18,7 +18,8 @@ $dark:                            #444 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
-$font-family-base: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-family-base: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$headings-font-weight: 300;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";

@@ -2210,7 +2210,7 @@ body, .ionic-body {
   color: #000;
   word-wrap: break-word;
   font-size: 14px;
-  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 20px;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
@@ -2535,8 +2535,8 @@ cite {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #000;
-  font-weight: 500;
-  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.2; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
     font-weight: normal;
@@ -4942,7 +4942,7 @@ label, input, button, select, textarea {
   line-height: 1.42857; }
 
 input, button, select, textarea {
-  font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 .item-input {
   display: -webkit-box;
@@ -7708,9 +7708,9 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
  * Apply roboto font
  */
 .roboto {
-  font-family: "Roboto", "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
   .roboto input {
-    font-family: "Roboto", "Ubuntu", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 /*
 .platform-android {
@@ -7818,15 +7818,21 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
 body {
   -webkit-font-smoothing: antialiased; }
 
+h1, h2, h3, h4, h5, h6, span, p {
+  -webkit-font-smoothing: antialiased; }
+
 #next-game {
-  background: url(/img/127128.jpg) no-repeat center center;
+  background: url(../img/127128.jpg) no-repeat center center;
+  background-size: cover;
+  background-position: center center;
   min-height: 200px; }
   #next-game h1, #next-game span, #next-game .score h2 {
     color: #fff;
     text-align: center; }
-  #next-game h1 {
-    padding: 40px 0 20px;
+  #next-game h1, #next-game .score {
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); }
+  #next-game h1 {
+    padding: 40px 0 20px; }
   #next-game span {
     display: block;
     font-size: 24px;

@@ -1,28 +1,28 @@
 $iphone: "only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait)";
 
-@mixin vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1, h2, h3, h4, h5, h6, span, p {
+  -webkit-font-smoothing: antialiased;
+}
+
 #next-game {
-  background: url(/img/127128.jpg) no-repeat center center;
+  background: url(../img/127128.jpg) no-repeat center center;
+  background-size: cover;
+  background-position: center center;
   min-height: 200px;
 
   h1, span, .score h2 {
     color: #fff;
     text-align: center;
   }
+  h1, .score {
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  }
   h1 {
     padding: 40px 0 20px;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   }
   span {
     display: block;
