@@ -8,39 +8,31 @@ angular.module('uaNextGame.controllers', [])
 
   $scope.games = sync.$asArray();
   $scope.game = {score: '0 - 0'};
-  $scope.gametime = new Date();
+  $scope.gametime = new moment();
 
   var nextGame = {},
       nextGameTime = null,
       prevGametime = null,
-      today = new Date(),
+      today = new moment(),
       todayHasGame = false;
-  today.setHours(0,0,0,0);
 
-  syncObject.$watch(function() {
-    _(syncObject).each(function(game, key) {
-      var gameTime = new Date(game.gametime + ' GMT-0500'),
-          gameDay = new Date(game.gametime + ' GMT-0500');
-      gameDay.setHours(0,0,0,0);
+  syncObject.$watch(function(e) {
+    var game = syncObject.$getRecord(e.key),
+        gameTime = new moment(game.gametime + '-0500'),
+        gameDay = new moment(game.gametime + '-0500');
 
-      if(gameDay.getTime() === today.getTime()) {
-        // Game is today
-        nextGame = game;
-        nextGameTime = gameTime;
-        todayHasGame = true;
-      } else if(!todayHasGame && (!nextGameTime || gameTime.getTime() < nextGameTime.getTime())) {
-        nextGameTime = gameTime;
-        nextGame = game;
-      }
-
-      game.zonedGameTime = new moment(gameTime);
-      game.zonedGameTime.zone(new Date().getTimezoneOffset());
-    });
-
-    $scope.game = nextGame;
-    if(!prevGametime || prevGametime.getTime() !== nextGameTime.getTime()) {
-      $scope.gametime = nextGameTime;
+    if(gameDay.isSame(today, 'day')) {
+      // Game is today
+      $scope.game = nextGame = game;
+      nextGameTime = gameTime;
+      todayHasGame = true;
+    } else if(!todayHasGame && (!nextGameTime || gameTime.isBefore(nextGameTime))) {
+      nextGameTime = gameTime;
+      $scope.game = nextGame = game;
     }
+
+    game.zonedGameTime = new moment(gameTime);
+    game.zonedGameTime.zone(new Date().getTimezoneOffset());
   });
   // syncObject.$bindTo($scope, 'games');
 })
