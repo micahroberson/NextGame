@@ -14,7 +14,18 @@ angular.module('uaNextGame.controllers', [])
       nextGameTime = null,
       prevGametime = null,
       today = new moment(),
-      todayHasGame = false;
+      todayHasGame = false,
+      timezoneOffset = (new Date).getTimezoneOffset();
+
+  // today.zone(timezoneOffset);
+
+  $scope.hasGameStarted = function() {
+    if($scope.game && $scope.game.zonedGameTime) {
+      new moment($scope.game.gametime + '-0500').isBefore(today);
+    } else {
+      false
+    }
+  };
 
   syncObject.$watch(function(e) {
     var game = syncObject.$getRecord(e.key),
@@ -32,7 +43,7 @@ angular.module('uaNextGame.controllers', [])
     }
 
     game.zonedGameTime = new moment(gameTime);
-    game.zonedGameTime.zone(new Date().getTimezoneOffset());
+    game.zonedGameTime.zone(timezoneOffset);
   });
   // syncObject.$bindTo($scope, 'games');
 })

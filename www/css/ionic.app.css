@@ -7843,3 +7843,13 @@ body {
 
 #schedule .gametime {
   float: right; }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+  #next-game span {
+    font-size: 18px; }
+  #next-game .logo {
+    max-width: 80px;
+    margin-right: auto;
+    margin-left: auto; }
+  .item {
+    font-size: 14px; } }

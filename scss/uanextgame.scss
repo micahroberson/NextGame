@@ -1,3 +1,13 @@
+$iphone: "only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait)";
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 body {
   -webkit-font-smoothing: antialiased;
 }
@@ -38,5 +48,21 @@ body {
 #schedule {
   .gametime {
     float: right;
+  }
+}
+
+@media #{$iphone} {
+  #next-game {
+    span {
+      font-size: 18px;
+    }
+    .logo {
+      max-width: 80px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  .item {
+    font-size: 14px;
   }
 }
