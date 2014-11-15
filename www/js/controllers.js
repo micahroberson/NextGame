@@ -19,8 +19,8 @@ angular.module('uaNextGame.controllers', [])
 
   syncObject.$watch(function() {
     _(syncObject).each(function(game, key) {
-      var gameTime = new Date(game.gametime),
-          gameDay = new Date(game.gametime);
+      var gameTime = new Date(game.gametime + ' GMT-0500'),
+          gameDay = new Date(game.gametime + ' GMT-0500');
       gameDay.setHours(0,0,0,0);
 
       if(gameDay.getTime() === today.getTime()) {
@@ -32,6 +32,9 @@ angular.module('uaNextGame.controllers', [])
         nextGameTime = gameTime;
         nextGame = game;
       }
+
+      game.zonedGameTime = new moment(gameTime);
+      game.zonedGameTime.zone(new Date().getTimezoneOffset());
     });
 
     $scope.game = nextGame;
