@@ -5,7 +5,7 @@
       <img class="logo home" ng-src="{{game.homelogo}}"/>
     </div>
     <div class="col">
-      <span ng-if="hasGameStarted()" am-time-ago="game.zonedGameTime"></span>
+      <span ng-if="!game.TimeInGame">{{game.zonedGameTime | amCalendar}}</span>
       <score></score>
     </div>
     <div class="col">

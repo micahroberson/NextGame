@@ -1,6 +1,7 @@
 <div id="schedule" class="list list-inset">
   <div class="item" ng-repeat="game in games | orderBy: 'gametime'">
     {{game.away}}
-    <span class="gametime">{{game.zonedGameTime | amDateFormat:'ddd, MMM Do @ h:mm a'}}</span>
+    <span ng-if="!game.WinLoss" class="gametime">{{game.zonedGameTime | amDateFormat:'ddd, MMM Do @ h:mm a'}}</span>
+    <span ng-if="game.WinLoss" class="gamescore">{{game.score}}</span>
   </div>
 </div>

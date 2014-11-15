@@ -37,7 +37,7 @@ angular.module('uaNextGame.controllers', [])
       $scope.game = nextGame = game;
       nextGameTime = gameTime;
       todayHasGame = true;
-    } else if(!todayHasGame && (!nextGameTime || gameTime.isBefore(nextGameTime))) {
+    } else if(!todayHasGame && gameTime.isAfter(today, 'day') && (!nextGameTime || gameTime.isBefore(nextGameTime))) {
       nextGameTime = gameTime;
       $scope.game = nextGame = game;
     }

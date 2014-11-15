@@ -25,7 +25,7 @@ angular.module('uaNextGame.directives', [])
     templateUrl: "templates/score.html",
     link: function(scope, element, attrs) {
       scope.$watch('game.score', function() {
-        var scores = scope.game.score.split(' - ');
+        var scores = scope.game.score.split('-');
         scope.homeScore = scores[0];
         scope.awayScore = scores[1];
       });
