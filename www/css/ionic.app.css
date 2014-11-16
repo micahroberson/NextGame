@@ -7847,8 +7847,26 @@ h1, h2, h3, h4, h5, h6, span, p {
   #next-game .row {
     padding-bottom: 40px; }
 
-#schedule .gametime, #schedule .gamescore {
+#schedule a {
+  color: #003366;
+  text-decoration: underline;
   float: right; }
+#schedule .gametime, #schedule .gamescore, #schedule .tv {
+  float: right; }
+#schedule .gametime {
+  font-size: 15px; }
+#schedule .tv {
+  font-size: 13px;
+  margin-top: 1px; }
+#schedule .col-right .row {
+  justify-content: flex-end;
+  padding: 0; }
+#schedule .item {
+  padding: 4px; }
+#schedule .logo {
+  max-width: 36px;
+  vertical-align: middle;
+  margin-right: 8px; }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
   #next-game span {

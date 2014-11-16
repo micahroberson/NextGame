@@ -46,8 +46,32 @@ h1, h2, h3, h4, h5, h6, span, p {
 }
 
 #schedule {
-  .gametime, .gamescore {
+  a {
+    color: #003366;
+    text-decoration: underline;
     float: right;
+  }
+  .gametime, .gamescore, .tv {
+    float: right;
+  }
+  .gametime {
+    font-size: 15px;
+  }
+  .tv {
+    font-size: 13px;
+    margin-top: 1px;
+  }
+  .col-right .row {
+    justify-content: flex-end;
+    padding: 0;
+  }
+  .item {
+    padding: 4px;
+  }
+  .logo {
+    max-width: 36px;
+    vertical-align: middle;
+    margin-right: 8px;
   }
 }
 
