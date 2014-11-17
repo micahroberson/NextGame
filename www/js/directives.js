@@ -26,8 +26,13 @@ angular.module('uaNextGame.directives', [])
     link: function(scope, element, attrs) {
       scope.$watch('game.score', function() {
         var scores = scope.game.score.split('-');
-        scope.homeScore = scores[0];
-        scope.awayScore = scores[1];
+        if(scope.game.location === 'vs') {
+          scope.homeScore = scores[0];
+          scope.awayScore = scores[1];
+        } else {
+          scope.homeScore = scores[1];
+          scope.awayScore = scores[0];
+        }
       });
     }
   }

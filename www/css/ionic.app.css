@@ -7875,5 +7875,7 @@ h1, h2, h3, h4, h5, h6, span, p {
     max-width: 80px;
     margin-right: auto;
     margin-left: auto; }
+  #next-game .score h2 {
+    font-size: 26px; }
   .item {
     font-size: 14px; } }
