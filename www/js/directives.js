@@ -36,4 +36,13 @@ angular.module('uaNextGame.directives', [])
       });
     }
   }
+})
+
+.directive('gametime', function($rootScope) {
+  return {
+    restrict: 'E',
+    replace: false,
+    scope: true,
+    templateUrl: "templates/gametime.html"
+  }
 });

@@ -73,6 +73,10 @@ h1, h2, h3, h4, h5, h6, span, p {
     vertical-align: middle;
     margin-right: 8px;
   }
+  .mobile-gametime {
+    display: none;
+    font-size: 13px;
+  }
 }
 
 @media #{$iphone} {
@@ -91,5 +95,13 @@ h1, h2, h3, h4, h5, h6, span, p {
   }
   .item {
     font-size: 14px;
+  }
+  #schedule {
+    .mobile-gametime {
+      display: block;
+    }
+    .desktop-gametime {
+      display: none;
+    }
   }
 }

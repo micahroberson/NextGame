@@ -7867,6 +7867,9 @@ h1, h2, h3, h4, h5, h6, span, p {
   max-width: 36px;
   vertical-align: middle;
   margin-right: 8px; }
+#schedule .mobile-gametime {
+  display: none;
+  font-size: 13px; }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
   #next-game span {
@@ -7878,4 +7881,8 @@ h1, h2, h3, h4, h5, h6, span, p {
   #next-game .score h2 {
     font-size: 26px; }
   .item {
-    font-size: 14px; } }
+    font-size: 14px; }
+  #schedule .mobile-gametime {
+    display: block; }
+  #schedule .desktop-gametime {
+    display: none; } }
