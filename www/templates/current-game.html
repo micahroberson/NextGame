@@ -2,7 +2,7 @@
   <h1>{{game.away}}</h1>
   <div class="row row-center">
     <div class="col">
-      <img class="logo home" ng-src="{{game.homelogo}}"/>
+      <img class="logo home" ng-src="{{game.HomeLogo}}"/>
     </div>
     <div class="col">
       <span ng-if="!game.TimeInGame">{{game.zonedGameTime | amCalendar}}</span>
@@ -10,7 +10,7 @@
       <span ng-if="game.TimeInGame">{{game.TimeInGame}}</span>
     </div>
     <div class="col">
-      <img class="logo away" ng-src="{{game.awaylogo}}"/>
+      <img class="logo away" ng-src="{{game.AwayLogo}}"/>
     </div>
   </div>
 </div>

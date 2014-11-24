@@ -24,16 +24,14 @@ angular.module('uaNextGame.directives', [])
     replace: true,
     templateUrl: "templates/score.html",
     link: function(scope, element, attrs) {
-      scope.$watch('game.score', function() {
-        var scores = scope.game.score.split('-');
-        if(scope.game.location === 'vs') {
-          scope.homeScore = scores[0];
-          scope.awayScore = scores[1];
-        } else {
-          scope.homeScore = scores[1];
-          scope.awayScore = scores[0];
-        }
-      });
+      var scores = scope.score.split('-');
+      if(scope.game.location === 'vs') {
+        scope.homeScore = scores[0];
+        scope.awayScore = scores[1];
+      } else {
+        scope.homeScore = scores[1];
+        scope.awayScore = scores[0];
+      }
     }
   }
 })

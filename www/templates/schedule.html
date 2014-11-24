@@ -1,23 +1,23 @@
 <div id="schedule" class="list list-inset">
-  <div class="item" ng-repeat="game in games | orderBy: 'gametime'">
+  <div class="item" ng-repeat="game in games | orderBy: 'GameTime'">
     <div class="row row-center">
       <div class="col">
-        <img class="logo" ng-src="{{game.awaylogo}}" />
-        <span class="opponent">{{game.away}}</span>
+        <img class="logo" ng-src="{{game.AwayLogo}}" />
+        <span class="opponent">{{game.Away}}</span>
       </div>
       <div class="col col-right">
         <div class="row">
           <a ng-if="game.link" href="{{game.link}}" target="_blank">
             <gametime></gametime>
-            <span ng-if="game.WinLoss" class="gamescore">{{game.score}}</span>
+            <span ng-if="game.score.$value !== null" class="gamescore">{{game.score.HomeScore}} - {{game.score.AwayScore}}</span>
           </a>
           <span ng-if="!game.link">
             <gametime></gametime>
-            <span ng-if="game.WinLoss" class="gamescore">{{game.score}}</span>
+            <span ng-if="game.score.$value !== null" class="gamescore">{{game.score.HomeScore}} - {{game.score.AwayScore}}</span>
           </span>
         </div>
-        <div ng-if="game.tv" class="row">
-          <span class="tv">{{game.tv || '&nbsp;'}}</span>
+        <div ng-if="game.Television" class="row">
+          <span class="tv">{{game.Television || '&nbsp;'}}</span>
         </div>
       </div>
     </div>
