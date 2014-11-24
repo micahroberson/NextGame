@@ -39,7 +39,7 @@ angular.module('uaNextGame.directives', [])
 .directive('gametime', function($rootScope) {
   return {
     restrict: 'E',
-    replace: false,
+    replace: true,
     scope: true,
     templateUrl: "templates/gametime.html"
   }

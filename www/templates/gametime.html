@@ -1,4 +1,6 @@
-<span class="desktop-gametime" ng-if="game.score.$value === null" class="gametime">{{game.zonedGameTime | amDateFormat:'ddd, MMM Do @ h:mm a'}}</span>
-<span class="mobile-gametime" ng-if="game.score.$value === null" class="gametime">{{game.zonedGameTime | amDateFormat:'MM/DD/YY @ h:mm a'}}</span>
-<span class="desktop-gametime" ng-if="game.score.$value !== null" class="gametime">{{game.score.GameTime}}</span>
-<span class="mobile-gametime" ng-if="game.score.$value !== null" class="gametime">{{game.score.GameTime}}</span>
+<div class="gametime-wrapper">
+  <span class="desktop gametime" ng-if="game.score.$value === null" class="gametime">{{game.zonedGameTime | amDateFormat:'ddd, MMM Do @ h:mm a'}}</span>
+  <span class="mobile gametime" ng-if="game.score.$value === null" class="gametime">{{game.zonedGameTime | amDateFormat:'MM/DD/YY @ h:mm a'}}</span>
+  <span class="desktop gametime" ng-if="game.score.$value !== null" class="gametime">{{game.score.GameTime}}</span>
+  <span class="mobile gametime" ng-if="game.score.$value !== null" class="gametime">{{game.score.GameTime}}</span>
+</div>

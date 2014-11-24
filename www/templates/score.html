@@ -1,3 +1,6 @@
-<div class='score'>
-  <h2>{{awayScore}} - {{homeScore}}</h2>
+<div class="score">
+  <h4>{{game.Television}}</h4>
+  <div ng-if="game.score.$value !== null">
+    <h2>{{awayScore}} - {{homeScore}}</h2>
+  </div>
 </div>
