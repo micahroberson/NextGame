@@ -22,17 +22,7 @@ angular.module('uaNextGame.directives', [])
   return {
     restrict: 'E',
     replace: true,
-    templateUrl: "templates/score.html",
-    link: function(scope, element, attrs) {
-      var scores = scope.score.split('-');
-      if(scope.game.location === 'vs') {
-        scope.homeScore = scores[0];
-        scope.awayScore = scores[1];
-      } else {
-        scope.homeScore = scores[1];
-        scope.awayScore = scores[0];
-      }
-    }
+    templateUrl: "templates/score.html"
   }
 })
 
