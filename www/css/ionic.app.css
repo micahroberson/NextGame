@@ -7826,7 +7826,7 @@ h1, h2, h3, h4, h5, h6, span, p {
   background-size: cover;
   background-position: center center;
   min-height: 200px; }
-  #next-game h1, #next-game span, #next-game .score h2, #next-game .score h4 {
+  #next-game h1, #next-game span, #next-game .score h2, #next-game .score h4, #next-game .score h5 {
     color: #fff;
     text-align: center; }
   #next-game h1, #next-game .score {
