@@ -3,7 +3,8 @@
     <div class="row row-center">
       <div class="col">
         <img class="logo" ng-src="{{game.AwayLogo}}" />
-        <span class="opponent">{{game.Away}}</span>
+        <span class="opponent" ng-if="game.location === 'vs'">{{game.Away}}</span>
+        <span class="opponent" ng-if="game.location === '@'">{{game.Home}}</span>
       </div>
       <div class="col col-right">
         <div class="row">
