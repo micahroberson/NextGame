@@ -7859,6 +7859,7 @@ h1, h2, h3, h4, h5, h6, span, p {
   font-size: 13px;
   margin-top: 1px; }
 #schedule .col-right .row {
+  -webkit-justify-content: flex-end;
   justify-content: flex-end;
   padding: 0; }
 #schedule .item {
