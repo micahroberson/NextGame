@@ -104,5 +104,12 @@ h1, h2, h3, h4, h5, h6, span, p {
     .desktop {
       display: none;
     }
+    .opponent, .tv {
+      display: inline-block;
+      max-width: 100px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
 }
